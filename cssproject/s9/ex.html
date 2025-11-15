@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html >
+<head>
+<title>Carte Animée</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+  }
+
+  .card {
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+    background-color: #e0f7fa;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <h2>Ma Carte Animée</h2>
+</div>
+
+</body>
+</html>

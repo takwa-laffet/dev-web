@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magazine Santé</title>
+</head>
+<style>
+    /* Style global */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f6f6f6;
+  color: #333;
+}
+
+header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 1em 0;
+}
+
+/* Conteneur principal : 2 colonnes */
+.container {
+  display: flex;
+  gap: 20px;
+  margin: 20px;
+}
+
+/* Article principal */
+.article {
+  flex: 3; /* Zone dominante */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Titre de l’article collant */
+.titre-article {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  padding: 10px 0;
+  margin: 0;
+  border-bottom: 2px solid #4CAF50;
+}
+
+/* Colonne conseils */
+.conseils {
+  flex: 1;
+  background-color: #fff8e1;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  height: fit-content;
+}
+
+.conseils h3 {
+  color: #4CAF50;
+  margin-top: 15px;
+}
+
+/* Responsive : pour petits écrans */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+
+</style>
+<body>
+  <header>
+    <h1>Magazine Santé</h1>
+  </header>
+
+  <main class="container">
+    <!-- Colonne Article -->
+    <article class="article">
+      <h2 class="titre-article">Bien manger pour mieux vivre</h2>
+      <p>
+        Une alimentation équilibrée est essentielle pour le bon fonctionnement de notre organisme. 
+        Elle doit apporter tous les nutriments nécessaires : protéines, glucides, lipides, vitamines et minéraux...
+      </p>
+      <p>
+        Manger varié permet d’éviter les carences et de maintenir une bonne santé. 
+        Les fruits et légumes, riches en fibres et antioxydants, doivent être présents à chaque repas.
+      </p>
+      <p>
+        Pensez également à bien vous hydrater ! L’eau est votre meilleure alliée pour éliminer les toxines et réguler la température corporelle.
+      </p>
+    </article>
+
+    <!-- Colonne Conseils -->
+    <aside class="conseils">
+      <h3>Astuce du jour 💡</h3>
+      <p>Buvez un grand verre d’eau dès le réveil pour réhydrater votre corps.</p>
+
+      <h3>Conseil bien-être 🌿</h3>
+      <p>Faites une courte marche après chaque repas pour faciliter la digestion.</p>
+
+      <h3>Petit rappel 🍎</h3>
+      <p>5 fruits et légumes par jour, c’est plus facile qu’on ne le pense !</p>
+    </aside>
+  </main>
+</body>
+</html>

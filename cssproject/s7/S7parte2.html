@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<style> 
+    .position{
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+    }
+    #div2{
+        position: sticky;
+        bottom: 0px;
+        right: 0px;
+        background-color: red;
+
+    }
+    #div3{
+        position: absolute ;
+        top:40px;
+        right: 40px;
+        background-color: green;
+    }
+    #divparent{
+        position: relative;
+        top: 12px;
+        left: 40px;
+        width: 800px;
+        height: 800px;
+        background-color: black;
+    }
+    #div1{
+        position: fixed;
+        bottom: 0px;
+        left: 0px;
+        background-color: yellow;
+    }
+    #div4{
+        background-color: orange;
+    }
+</style>
+    </head>
+    <body>
+
+        <div class="position" id="divparent">
+        <div class="position" id="div1"></div> 
+        <br>
+        <div class="position" id="div2"></div> 
+        <br>
+
+        <div class="position" id="div3"></div> 
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="position" id="div4"></div> 
+</div>
+
+    </body>
+</html>

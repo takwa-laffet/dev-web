@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <style>
+        /* 1. Première lettre agrandie */
+p::first-letter {
+  font-size: 2em;
+  color: blue;
+}
+
+/* 2. Ligne décorative avant le titre */
+h2::before {
+  content: "— ";
+  color: gray;
+}
+
+/* 3. Emoji après le titre */
+h2::after {
+  content: " 🏥";
+}
+
+    </style>
+</head>
+<body>
+    <h2>Article Médical</h2>
+<p>La santé est notre bien le plus précieux. Prenons-en soin chaque jour.</p>
+
+</body>
+</html>

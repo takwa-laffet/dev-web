@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>welcome</title>
+  <style>
+    /* body {
+      font-family: sans-serif;
+      background-color: #f2f2f2;
+      text-align: center;
+      margin-top: 100px;
+    } */
+    .fade {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeIn 2s ease forwards
+/*       display: inline-block;
+      margin: 10px; */
+    }
+
+    .delay1 { animation-delay: 0s; }
+    .delay2 { animation-delay: 3s; }
+    .delay3 { animation-delay: 1s; }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <p class="fade delay1">hi</p>
+  <p class="fade delay2">welcome</p>
+  <p class="fade delay3">in our club</p>
+</body>
+</html>
