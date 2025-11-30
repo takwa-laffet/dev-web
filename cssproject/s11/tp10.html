@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>exercice1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            gap: 10px;
+            height: auto;
+            background-color: beige;
+            flex-wrap: wrap;
+        }
+
+        .container div{
+            border: 1px solid red;
+            text-align: center;
+            height: 200px;
+            width: 200px;
+            background-color: brown;
+        }
+
+        @media (max-width: 768px){
+            .container{
+                flex-direction: column;
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div>bloc1</div>
+        <div>bloc2</div>
+        <div>bloc3</div>
+    </div>
+</body>
+</html>

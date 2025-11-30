@@ -1,0 +1,15 @@
+.stylepink{
+    background-color: rgb(243, 113, 135);
+}
+.article{
+    color: blue;
+}
+#div1{
+    color :chocolate;
+} 
+div > p {
+    color: green;
+}
+div + p{
+    color:rgb(106, 0, 255)
+}

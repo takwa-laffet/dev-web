@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <style>
+        /* Lien au survol */
+nav a:hover {
+  color: blue;
+}
+
+/* Lien actif */
+nav a.active {
+  text-decoration: underline;
+}
+
+/* Ligne animée avec ::after */
+nav a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background: blue;
+  width: 0;
+  transition: width 0.3s;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+    </style>
+</head>
+<body>
+<nav>
+  <a href="#">Accueil</a>
+  <a href="#" class="active">Cours</a>
+  <a href="#">Contact</a>
+</nav>
+
+</body>
+</html>

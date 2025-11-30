@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Site d'école</title>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    font-weight: bold;
+    margin: 0 15px;
+}
+
+main {
+    margin-top: 70px;
+}
+
+.card {
+    position: relative;
+    width: 300px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+        .card img {
+            position: absolute;
+            border-radius: 15px;
+            top: -11px;
+             left: 38%;
+            width: 80px;
+            height: 80px;
+            border: 2px solid white;
+        }
+
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 20px 40px 20px;
+}
+
+.article {
+    background-color: hsla(0, 100%, 50%,0.75);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.article:hover {
+    background-color: #29b93c;
+}
+</style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="#">Accueil</a>
+    <a href="#">À propos</a>
+    <a href="#">Cours</a>
+    <a href="#">Contact</a>
+</nav>
+
+<main>
+    <div class="card">
+        <img src="https://zaherkammoun.com/wp-content/uploads/2020/03/%C3%A9cole-sadiki-8-2-scaled.jpg" alt="Photo de l'école">
+       <br>
+       <br>
+       <br>
+       <br>
+
+        <h2>Sadiki </h2>
+        <p>Le collège Sadiki (arabe : المدرسة الصادقية) est le premier lycée moderne de Tunisie.</p>
+    </div>
+
+    <div class="articles-grid">
+        <div class="article">Article 1</div>
+        <div class="article">Article 2</div>
+        <div class="article">Article 3</div>
+        <div class="article">Article 4</div>
+        <div class="article">Article 5</div>
+        <div class="article">Article 6</div>
+    </div>
+</main>
+
+</body>
+</html>

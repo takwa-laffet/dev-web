@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta >
+  <title>Connexion - École en ligne</title>
+  <style>
+    /* === STYLE GLOBAL === */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7fb;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      width: 320px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    /* === CHAMPS DE FORMULAIRE === */
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    /* 1️⃣ Bordure colorée quand le champ est focus */
+    input:focus {
+      border-color: #000000;
+      outline: none;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.4);
+    }
+
+    /* 4️⃣ Champ invalide (si vide ou mal rempli) */
+    input:invalid {
+      border-color: red;
+    }
+
+    /* === BOUTON === */
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    /* 2️⃣ Changement de couleur au survol */
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    /* 3️⃣ Bouton désactivé */
+    button:disabled {
+      background-color: #ccc;
+      color: #666;
+      cursor: not-allowed;
+      opacity: 0.7;
+    }
+
+    /* Petit texte */
+    .info {
+      text-align: center;
+      font-size: 13px;
+      color: #666;
+      margin-top: 15px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Connexion - École en ligne</h2>
+    <form>
+      <label for="email">Adresse e-mail :</label>
+      <input type="email" id="email" name="email" placeholder="exemple@ecole.com" required>
+
+      <label for="password">Mot de passe :</label>
+      <input type="password" id="password" name="password" placeholder="********" required minlength="6">
+
+      <button type="submit">Se connecter</button>
+      <!-- Exemple de bouton désactivé -->
+      <!-- <button type="submit" disabled>Se connecter</button> -->
+    </form>
+
+    <p class="info">© 2025 École En Ligne</p>
+  </div>
+
+</body>
+</html>
