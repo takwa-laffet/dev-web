@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<head>
+    <title> s2 functions</title>
+</head>
+<html>
+    <body>
+        <script>
+            //declaration classique
+            function f1(){
+                console.log("f1");
+            } 
+            f1();
+// returne en valure 
+function f2(){
+    return 4;
+}
+let x = f2()+6;
+console.log("x=",x);
+console.log(f2());
+//fonction avec portée globale
+let y=4;
+function f4(){
+    console.log("y=",y);
+}
+f4();
+//fonction avec portée locale
+function f5(){
+    let z=8;
+    console.log("Z=",z);
+}
+let z=400;
+console.log("z=",z);
+f5();
+console.log("z=",z);
+//closure
+function ma(){
+    let nom="test";
+function mb(){
+    console.log(nom);
+}
+return mb;
+}
+const constant=ma();
+constant();
+/* let r=ma();
+r(); */
+//closure avec crementation
+function compteur(){
+    let count=0;
+    return function(){
+        count++; //count=count+1
+        console.log(count);
+}
+}/* 
+const c=compteur();
+c();
+c();
+c(); */
+//compteur()();
+//tableau array 
+let tab=[1,2,3,3,5];
+let doubles=tab.map(n=>n-3);
+console.log(doubles);
+//tableau d'objets
+let personnes=[
+    {nom:"Alice",age:25},
+    {nom:"Bob",age:30}];
+let noms=personnes.map(p=>p.age);
+console.log(noms);
+//ajouter, supprimer , modifier elements //25
+        </script>
+    </body>
+</html>
