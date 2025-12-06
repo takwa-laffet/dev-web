@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <body>
+<h1>local storage</h1>
+<label for="nom">nom</label>
+<input type="text" id="nom">
+<input type="number" id="age">
+<button onclick="save()">save me</button>
+<button onclick="remove()">remove</button>
+<button onclick="clearall()">clear all</button>
+    </body>
+    <script>
+        console.log(localStorage.getItem("nom"));//affichage
+        console.log(localStorage.getItem("age"));//affichage
+    function save(){
+    const nom=document.getElementById("nom").value;
+    const age=document.getElementById("age").value;
+if(nom=='' && age=='' ){
+    let p = document.createElement("p");
+    const text=document.createTextNode("vous devez donner votre nom et age");
+         p.appendChild(text);
+    p.style.color="red";
+    document.body.appendChild(p);
+}
+else{
+    localStorage.setItem("nom",nom);//enregistrer
+    localStorage.setItem("age",age)
+    let p=document.createElement("p");
+    const text=document.createTextNode("vous avez enregistrer votre nom"+" "+ nom +" et votre age"+" "+age);
+    p.appendChild(text);
+    p.style.color="green";
+    document.body.appendChild(p);
+    
+}
+}
+//remove
+function remove(){
+    if(localStorage.getItem("nom")){
+        localStorage.removeItem("nom");//remove item
+        let p=document.createElement("p");
+        const text=document.createTextNode("vous avez supprimer votre nom");
+        p.appendChild(text);
+        p.style.color="#F87C63";
+        document.body.appendChild(p);
+    }
+    else{
+        let p=document.createElement("p");
+        const text=document.createTextNode("vous n'avez pas enregistrer votre nom");
+        p.appendChild(text);
+        p.style.color="#63F866";
+        document.body.appendChild(p);
+    }
+}
+
+//clear all localstorage
+function clearall(){
+    localStorage.clear();
+}
+</script>
+    </html>
