@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>hi</h1>
+        <script>
+        //methode classique 
+        /* function f1(){
+            let a =1;
+            let char="bonjour";
+        }
+        //version court es6+
+        const f1=()=>{
+            let a =1;
+            let char="bonjour";
+        } */
+        //fonction avec parametres
+        function f2(a,b){
+            console.log("a:"+" "+a+ "et b:"+" "+b);
+            return a,b;
+        }
+        // appel de la fonction 
+        let varaible1 =10;
+        let varaible2 =20;
+        f2(varaible2,varaible1);
+        //f2(4,5);
+        //fonction avec parametres court 
+        let somme1=(a,b)=>{
+            f2(3,5);
+            let x=a+b;
+            console.log("le somme est:",x);
+            return x;
+        }
+        // appel
+        let x= somme1(3,4) + somme1(10,30);
+        console.log("x:",x);
+        let name ="takwa";
+        const hi=(name,age) => console.log("hi",name,age);
+        //appel
+        hi("ahmed",20);
+        /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        /* const person={
+            name:"takwa",
+            age:10,
+            show(){
+                setTimeout(()=>{
+                    console.log("bonjour ",this.name,this.age)
+                },3000)
+            }
+        }
+        //appel
+        person.show();
+        //setInterval
+        let f4=()=>{
+            this.count=0,
+            setInterval(()=>{
+                this.count=count+1;
+                console.log(this.count);
+            },1000)
+
+        }
+        //appel
+        f4(); */
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //descructuring
+        //object
+        const user={
+            nom:"sara",
+            age:19,
+            depertemet:"IT"
+        };
+        //console.log("nom:",user.nom);
+        /* const {nom,age,depertemet}=user;
+        console.log("nom:",nom);  //user.name
+        console.log("age:",age); //user.age
+        console.log("depertement:",depertemet);//user.depertement  */
+        //list
+        let list1=["math","physique","sc","technique"];
+        const [math,physique,sc,technique]=list1;
+        console.log("math:",math);
+        console.log("physique:",physique);
+        console.log("sc:",sc);
+        console.log("technique:",technique);
+        //valuer par defaut
+        const list2=[11,12,14,5]
+        const [a,b,c,d,e=20]=list2;
+        console.log("a:",a);
+        console.log("d:",d);
+        console.log("e:",e);
+        //rename les varaibles
+        const {nom:username}=user;
+        console.log("user",username);
+        //ex product
+        const product={
+            title:"pc",
+            prix:1200,
+            brand:"dell"
+        }
+        const {title:titre,prix,quantity=20}=product;
+        console.log("titre:",titre);
+        console.log("prix:",prix);
+        console.log("quantity:",quantity);
+        </script>
+    </body>
+</html>

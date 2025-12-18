@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width,intial-scale=1.0">
+ <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" 
+        rel="stylesheet"
+    >
+    </head><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<title>to do list</title>
+
+<body class="bg-dark text-light d-flex justify-content-center align-items-center vh-100">
+   <div class="container py-5">
+<div class="row justify-content-center">
+    <div class="col-6">
+        <div class="card shadow-sm">
+            <h3 class="card-title text-center mb-3 "> list des taches</h3>
+            <div class="input-group mb-3">
+                <input id="taskinput" type="text" class="form-control" placeholder="ecrire votre tache ..." aria-label="tache">
+                <button id="addbtn" class="btn btn-primary">ajouter</button>
+            </div>
+            <!---les messages des erreurs-->
+            <div id="msg" class="text-danger small mb-3 "style="display:none"></div>
+        <!---les taches-->
+        <ul id="taskslist" class="list-group">
+        
+        </ul>
+        <div class="d-flex justify-content-between mt-3">
+            <button id="clear" class="btn btn-outline-danger btn-sm">supprimer tout</button> 
+        </div>
+   
+    </div>
+    </div>
+</div>
+   </div>
+<script src="script.js"></script>
+    </body>
+</html>
