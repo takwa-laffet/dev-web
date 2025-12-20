@@ -1,21 +1,20 @@
-export const weatherApi=async function(){
-   const apiKey=process.env.API_KEY;
-    const apiUrl=process.env.Api_Url;
-    const city="Tunis";
-    try{
-    const response= await fetch(`${apiUrl}/weather?q=${city}&appid=${apiKey}&units=metric`);
-    
-if(response.ok){
-    const data=await response.json();
-    return data;
+import axios from 'axios';
+const API_KEY="395b727069ff007299983e9d226ab194";
+const Api_Url="https://api.openweathermap.org/data/2.5/weather";
+export const weatherApi= async (city)=>{
+try{
+    const response=await axios.get(`${Api_Url}`,{
+        params:{
+            q:city,
+            appid:API_KEY,
+            units:"metric",
+            lang:"fr"
+        }
+    });
+   console.log(response);
+    return response.data;
+}catch(error){
+    console.error("Erreur lors de la récupération des données météo:",error);
+    throw error;
 }
-else{
-    console.log("HTTP-Error:",response.status);
-}
-}
-    catch(error){
-        console.log("Error fetching weather data:",error);
-    }
-
-    
-}
+};
