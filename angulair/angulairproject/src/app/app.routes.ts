@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { Login } from './login/login';
-import {MonComposant}from './mon-composant/mon-composant';
+import { MyComponet } from './my-componet/my-componet';
+import { Tasks } from './tasks/tasks';
 
 export const routes: Routes = [
     {
@@ -8,7 +9,12 @@ export const routes: Routes = [
         component:Login
     },
     {
-        path:"task",
-        component:MonComposant
+        path:"",
+        component:Tasks
+    },
+    {
+        path:"user",
+        component:MyComponet
+
     }
 ];

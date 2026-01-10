@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MonComposant } from './mon-composant';
+import { Tasks } from './tasks';
 
-describe('MonComposant', () => {
-  let component: MonComposant;
-  let fixture: ComponentFixture<MonComposant>;
+describe('Tasks', () => {
+  let component: Tasks;
+  let fixture: ComponentFixture<Tasks>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MonComposant]
+      imports: [Tasks]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MonComposant);
+    fixture = TestBed.createComponent(Tasks);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });

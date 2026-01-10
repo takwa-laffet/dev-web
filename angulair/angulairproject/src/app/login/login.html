@@ -3,5 +3,9 @@
 <button (click)="increment()">+ </button>
 <br>
 <br>
-
+<img [src]="imageurl">
 <button (click)="decrement()">-</button>
+
+<!--tow way binding-->
+<input [(ngModel)]="username">
+<p>{{username}}</p>

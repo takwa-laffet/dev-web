@@ -1,0 +1,15 @@
+    <h2>Todo list</h2>
+    <input [(ngModel)]="task" placeholder="add new task" required>
+    <input [(ngModel)]="pirority" placeholder="add" required>
+    <button (click)="addtask()">add</button>
+    @if (tasks.length === 0) {
+      <p>you dont have any task for now pls add one</p>
+    }<ul>
+      @for (t of tasks; track t; let i = $index) {
+        <li [appPrirorityColor]="t.pirority">{{i}}: {{t.name}} </li>
+      }
+    </ul>
+    @if (tasks.length ===3){
+      <p>you have completed 3 tasks</p>
+    }
+    
