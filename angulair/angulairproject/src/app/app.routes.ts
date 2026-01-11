@@ -9,7 +9,7 @@ export const routes: Routes = [
         component:Login
     },
     {
-        path:"",
+        path:"task",
         component:Tasks
     },
     {

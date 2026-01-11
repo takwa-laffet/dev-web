@@ -1,0 +1,8 @@
+@if (questions.length > c) {
+    <h3> question {{c+1}}:{{questions[c].question}}</h3>
+    <ul>
+        @for(option of questions[c].options; track option) {
+            <button (click)="selectoption(option)">{{option}}</button>
+        }
+    </ul>
+}
