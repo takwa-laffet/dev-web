@@ -1,0 +1,27 @@
+<!-- <div class="user-card"
+ [ngClass]="{'active-card': isActive,
+'inactive-card': !isActive,
+'disables' : isdisabled
+}"> -->
+<div [class.active-card]="isActive"
+[class.inactive-card]="!isActive"
+[class.disables]="isdisabled"
+>
+
+<h2>this is user card</h2>
+<p>{{isActive ? 'active' : 'not active'}}</p>
+<button (click)="status()">show the status </button>
+<button (click)="disable()">disable</button>
+</div>
+<div [ngClass]="['box','shadow','rounded']">
+    card
+</div>
+<p [ngStyle]="{'color':textColor}">this is user card</p>
+<p [ngStyle]="{'color': textColor !== 'black' ? 'red' : 'orange'}">
+  this is user card
+</p>
+<p [ngStyle]="{'color': x > 0 ? 'green' : 'blue' }">ttss</p>
+<div [ngStyle]="{'font-size':  x > 0 ? '10px' : '300px'}">This is 20px font size</div>
+<p [style.color]="x > 0 ? 'red' : 'black'">test</p>
+
+
