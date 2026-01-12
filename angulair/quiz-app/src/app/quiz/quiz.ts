@@ -23,16 +23,24 @@ export class Quiz {
   ]
   c=0;
   score=0;
+  feedbackMessage: string = '';
+  isCorrect: boolean = false;
+  showFeedback: boolean = false;
   selectoption(option:string){
     if(option==this.questions[this.c].answer){
-     
+      this.feedbackMessage = 'Correct! Well done!';
+      this.isCorrect = true;
       this.score++;
+    } else {
+      this.feedbackMessage = 'Incorrect. The correct answer is: ' + this.questions[this.c].answer;
+      this.isCorrect = false;
     }
+    this.showFeedback = true;
+    
     this.c++;
     if(this.c==this.questions.length){
       this.router.navigate(['/result'],{state:{score:this.score}});
     }
-  
   }
 
 }

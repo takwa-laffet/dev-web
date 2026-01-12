@@ -1,3 +1,9 @@
+@if (showFeedback && c > 0) {
+    <div [class]="isCorrect ? 'feedback-correct' : 'feedback-incorrect'">
+        {{feedbackMessage}}
+    </div>
+}
+
 @if (questions.length > c) {
     <h3> question {{c+1}}:{{questions[c].question}}</h3>
     <ul>
