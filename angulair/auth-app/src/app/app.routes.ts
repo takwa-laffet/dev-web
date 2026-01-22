@@ -8,6 +8,9 @@ import { Setting } from './setting/setting';
 import { AuthGuard } from './dashboard/auth.guard';
 import { Admin } from './admin/admin';
 import { Resolver } from './setting/Resolver';
+import { Template } from './template/template';
+import { Reactive } from './reactive/reactive';
+import { Formarry } from './formarry/formarry';
 export const routes: Routes = [
     {
         path:"",
@@ -33,7 +36,17 @@ export const routes: Routes = [
         path:"admin",
         loadComponent : ()=> import('./admin/admin').then(m => m.Admin)
     },
-
+{
+    path:"template",
+    component:Template
+},
+{
+path:"reactive",
+component:Reactive
+},{
+    path:"array",
+    component:Formarry
+},
     {
         path:"**",
         component: NotFound

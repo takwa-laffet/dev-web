@@ -1,0 +1,15 @@
+<p>formarry works!</p>
+<form [formGroup]="form">
+  <div formArrayName="items">
+    @for (item of items.controls ; track item;let i=$index) {
+        <div [formGroupName]="i">
+            <input formControlName="name" placeholder="Item Name" />
+            <input formControlName="quantity" placeholder="Quantity" type="number" />
+        <button (click)="removeItem(i)">Remove</button>
+
+        </div>
+    }
+  </div>
+  <button (click)="addItem()">Add Item</button>
+  <button type="submit" (click)="onSubmit()">Submit</button>
+</form>

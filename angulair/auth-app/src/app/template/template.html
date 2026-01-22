@@ -1,0 +1,22 @@
+<h1>form exemple</h1>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <label for="username">Username:</label>
+    <input type="text"  name="name" [(ngModel)]="user.name" required #name="ngModel" minlength="3" maxlength="6">
+    @if(name.errors?.['required'] || name.errors?.['minlength'] || name.errors?.['maxlength']){
+    <p style="color: red;">
+       the name is required
+    </p>
+    }
+    <br>
+    <label for="email">Email:</label>
+    <input type="email"  name="email" [(ngModel)]="user.email" required #email="ngModel" minlength="10" maxlength="20">
+    @if(email.errors?.['required']|| email.errors?.['minlength'] || email.errors?.['maxlength']){
+    <p style="color: red;">
+       the email is required
+    </p>
+    }
+    <br>
+    <label for="age">Age:</label>
+    <input type="number" name="age" [(ngModel)]="user.age" required>
+<button type="submit" [disabled]="!myForm.valid">envoyer</button>
+    </form>

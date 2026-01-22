@@ -1,0 +1,17 @@
+<form [formGroup]="test"  (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="first_name" placeholder="First Name">
+    <input type="text" formControlName="last_name" placeholder="Last Name">
+    <div formGroupName="address">
+        <input type="text" formControlName="city" placeholder="City">
+        <input type="text" formControlName="postal_code" placeholder="postal_code">
+        
+</div>
+
+<input type="submit" value="Submit" [disabled]="!test.valid ">
+<button type="button" (click)="patch()">patch value</button>
+<button type="button" (click)="reset()">reset value</button>
+</form>
+
+@if(!test.valid){
+    <p style="color: red; font-size: 40px;">Form is invalid</p>
+}
