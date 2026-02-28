@@ -27,15 +27,37 @@ getusername(){
     console.log("the username is"+" "+this.username);
 }
 }
+class Payment extends Bankaccount{
+    constructor(username,balance){
+        super(username,balance);
+    }
+    pay(){
+        console.log("you have paid");
+    }
+}
+class CreditCard extends Payment{
+    constructor(username,balance){
+        super(username,balance);
+    }
+
+    pay(username){
+        console.log("you have paid with credit card "+username);
+    }}
+class Paypal extends Payment{
+    pay(){
+        console.log("you have paid with paypal");
+    }}
 // objet 1
 const account1 = new Bankaccount("sara",1000);
-account1.username="takwa";
+const payment1 = new CreditCard("sara",500);
+payment1.pay("sara");
+/* account1.username="takwa";
 account1.getusername();
 account1.balance=500000;
 account1.getbalance();
 account1.depost(500);
 account1.getbalance();
-account1.withdraw(300);
+account1.withdraw(300); */
 
 /* const account2={
     username:"takwa",
