@@ -1,0 +1,42 @@
+<!-- <p>{{userName}}</p>
+<button [disabled]="buttonDisabled" (click)="showAlert()">Click me</button>
+<img [src]="imageUrl()">
+<button (click)="clicker()">test</button>
+ --><!-- 
+<input [(ngModel)]="usercity" placeholder="give me your city ">
+
+<p>{{usercity}}</p> -->
+<!-- <h1>{{count()}}</h1>
+<p>{{doublecount()}}</p>
+<button (click)="increment()">increment</button>
+<p>{{count()}}</p>
+<button (click)="decrementation()">decrement</button>
+<p>{{count()}}</p>
+<button (click)="reset()">reset</button> -->
+<!-- <h1>your tasks list</h1>
+<button (click)="showlist.set(!showlist())">
+    {{showlist() ? 'Hide':'Show'}} list</button>
+@if (showlist()){
+    <ul>
+        
+        @for ( task of tasks(); track task.id){
+            <li>{{task.name}}</li>
+            <li>{{task.completed ? 'completed' : 'not completed'}}</li>
+        }
+        @empty{
+            <p>pls add some tasks</p>
+        }
+    </ul>
+}
+@else {
+    <p>No tasks to display</p>
+}
+<button (click)="clear()">clear tasks</button> -->
+<!-- <div [ngClass]="{'div1': isadmin(), 'div2': !isadmin()}">
+    test 
+</div> -->
+<!-- <p [ngStyle]="{'font-size': currentProgress() + 'px'
+,'color':currentProgress() >10 ?'red':'blue',
+ 'background-color':currentProgress()>50 ? 'green':'yellow'}">dev web </p> -->
+ 
+<router-outlet />
