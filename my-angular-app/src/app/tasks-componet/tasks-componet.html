@@ -1,0 +1,14 @@
+<h1>tasks list</h1>
+<input #taskinput type="text" placeholder="add new task">
+<button (click)="addnewtask(taskinput.value); taskinput.value=''">add task</button>
+
+<ul>
+    @for (task of alltasks(); track $index) {
+        <li>
+            {{ task }} 
+            <button (click) = "removetask(task)">remove task</button>
+        </li>
+    } @empty {
+        <li>no tasks yet, add one pls</li>
+    }
+</ul>
