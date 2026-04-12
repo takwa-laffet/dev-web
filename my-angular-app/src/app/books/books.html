@@ -1,0 +1,9 @@
+<div >
+    <h1>les livres</h1>
+    @for (book of b();track book){
+        <div style="border: 1px solid #000000; margin: 10px; padding: 10px;">
+            <h2>{{book.title}}</h2>
+            <h3>{{book.completed}}</h3>
+        </div>
+    }
+</div>

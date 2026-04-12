@@ -1,0 +1,6 @@
+<p>lifecycle works! {{data}}</p>
+<input type="text" [(ngModel)]="data">
+<button (click)="visible = !visible">{{visible ? 'Hide' : 'Show'}}</button>
+@if (visible){
+    <p>this is a paragraph</p>
+}

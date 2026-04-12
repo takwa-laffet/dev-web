@@ -6,6 +6,9 @@ import { Composont3 } from './composont3/composont3';
 import { TasksComponet } from './tasks-componet/tasks-componet';
 import { Formulair } from './formulair/formulair';
 import { ReactiveForm } from './reactive-form/reactive-form';
+import { S20 } from './s20/s20';
+import { Books } from './books/books';
+import { Lifecycle } from './lifecycle/lifecycle';
 export const routes: Routes = [
     {path:'',component: App},
     {path:'exmple1',component: MonComposant},
@@ -13,5 +16,8 @@ export const routes: Routes = [
     {path:'exmple3',component: Composont3},
     {path:'tasks',component: TasksComponet},
     {path:'contact',component: Formulair},
-    {path:'reactive-form',component: ReactiveForm}
+    {path:'reactive-form',component: ReactiveForm},
+    {path:'s20',component: S20},
+    {path:'book',component: Books},
+    {path:'lifecycle',component: Lifecycle}
 ];

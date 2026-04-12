@@ -4,5 +4,12 @@
     <a routerLink="/exmple1">Example 1</a>
     <a routerLink="/exmple2/takwa">Example 2</a>
  </nav>
+ <p>{{today | date:'MM/dd/yyyy'}}</p>
+ <p>{{price | currency:'$':'symbol':'1.2-2'}}</p>
+ <p>{{'hello world' | reverse}}</p>
+ <p>{{'angular' |uppercase }}</p>
+ <p>{{user.date | date:'fullDate'}}</p>
+ <p>{{user.name | lowercase }}</p>
+    <p>{{user.email | custom:"'"":"'"}}</p>
 <router-outlet />
 

@@ -1,0 +1,32 @@
+@if (user.islogin){
+    <p>user conecter</p>
+}
+@else if (user.ispinding){
+    <p>user en attente</p>
+}
+@else{
+    <p>user non connecté</p>
+}
+<!-- @for (admin of admins; track admin){
+    <p>{{admin}}</p>
+}@empty{
+    <p>no admins </p>
+} -->
+@if (user.islogin){
+@for (admin of admins; track admin){
+    <p>{{admin}}</p>
+}@empty{
+    <p>no admins </p>
+} }
+@else if (user.ispinding){
+    <p>admin en attente</p>
+}
+@else{
+    <p>admin non connecté</p>
+}
+<div [ngClass]="{'div1':isadmin(),'div2':!isadmin()}">
+    test
+</div>
+<p [ngClass]="[age()>10 ? 'p1' : 'p2']">testttttttttttt</p>
+<h1 [ngStyle]="{'font-size': age() + 'px' ,'width': age()>5 ? '200px' : '100px','color':age()>18 ?'black':'pink' }">
+    test</h1>

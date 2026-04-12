@@ -1,0 +1,20 @@
+.div1{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+}
+.div2{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+.p1{
+    color: rgb(62, 5, 250);
+    font-size: 500px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.p2{
+    color: rgb(252, 3, 194);
+    font-size: 500px;
+    font-family: 'arial', sans-serif;
+}

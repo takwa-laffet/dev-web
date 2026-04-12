@@ -1,0 +1,18 @@
+    <div class="card mb-3 p-4 ms-4 ml-4 contairner">
+        <div class="card-body row" >
+@for (d of dentistes; track d.id){
+            <div class="col-3">
+            <img [src]="d.photo" class="card-img " style="width: 300px; height: 300px;" alt="{{d.nom}} ">
+            <h5 class="card-title ">{{d.nom}}</h5>
+            <p class="card-text ">{{d.specialite}}</p>
+            <p class="card-text ">{{d.experience}} ans d'expérience</p>
+        <button class="btn btn-primary" [routerLink]="['/detailsd',d.id]">
+            Voir les détails
+        </button>
+        </div>}
+        @empty{
+    <p>Aucun dentiste trouvé pour le moment</p>
+}
+    </div> </div>
+
+<router-outlet></router-outlet>

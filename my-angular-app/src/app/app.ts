@@ -3,9 +3,11 @@ import { RouterOutlet,RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { SIGNAL } from '@angular/core/primitives/signals';
 import { NgClass ,NgStyle } from '@angular/common';
+import { Lifecycle } from './lifecycle/lifecycle';
+import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterLink, FormsModule, NgClass, NgStyle ],
+  imports: [RouterOutlet,RouterLink, FormsModule, NgClass, NgStyle,Lifecycle, CommonModule ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -48,7 +50,15 @@ clear(){
 } */
 /* isadmin=signal(true);
  */
+mynumber=0;
+isvisible=signal(true);
 isadmin=signal(false);
+increment(){
+  this.mynumber++;
+}
+toggle(){
+  this.isvisible.update(v=>!v);
+}
 currentProgress=signal(61);
   protected readonly title = signal('my-angular-app');
 }
