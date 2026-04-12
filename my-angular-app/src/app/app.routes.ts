@@ -9,6 +9,8 @@ import { ReactiveForm } from './reactive-form/reactive-form';
 import { S20 } from './s20/s20';
 import { Books } from './books/books';
 import { Lifecycle } from './lifecycle/lifecycle';
+import { S22 } from './s22/s22';
+import { S22Parent } from './s22-parent/s22-parent';
 export const routes: Routes = [
     {path:'',component: App},
     {path:'exmple1',component: MonComposant},
@@ -19,5 +21,7 @@ export const routes: Routes = [
     {path:'reactive-form',component: ReactiveForm},
     {path:'s20',component: S20},
     {path:'book',component: Books},
-    {path:'lifecycle',component: Lifecycle}
+    {path:'lifecycle',component: Lifecycle},
+    {path:'s22',component: S22},
+    {path:'s22-parent', component: S22Parent}
 ];
