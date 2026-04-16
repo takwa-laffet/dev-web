@@ -1,0 +1,15 @@
+<p>modifierprod works!</p>
+<form #modifierprodForm="ngForm" (ngSubmit)="onSubmit(modifierprodForm)">
+  <div class="form-group">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" class="form-control" [ngModel]="product.nom" required>
+<p>{{product.nom}}</p>  
+</div>
+  <div class="form-group">
+    <label for="price">Price:</label>
+    <input type="number" id="price" name="price" class="form-control" [ngModel]="product.prix" required>
+<p>{{product.prix}}</p>  
+</div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

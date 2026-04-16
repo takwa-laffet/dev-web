@@ -1,0 +1,31 @@
+<h1>produit component</h1>
+<table border="1" class="border border-dark p-3 mb-3 rounded w-50">
+<tr>
+    <th>nom</th>
+    <th>prix</th>
+    <th>modifier</th>
+    <th>supprimer</th>
+    </tr>
+@for (p of produits; track p.id){
+    <tr>
+        <td>{{p.nom}}</td>
+        <td>{{p.prix}}</td>
+        <td><button type="button" class="btn btn-warning" routerLink="/modifierprod/${p.id}">Modifier</button></td>
+        <td><button type="button" class="btn btn-danger" (click)="supprimer(p.id)">Supprimer</button></td>
+    </tr>
+    }
+</table>
+<form #produitForm="ngForm" (ngSubmit)="prod(produitForm)">
+  <div class="mb-3">
+    <label for="id" class="form-label">ID</label>
+    <input type="number" id="id" name="id" class="form-control" required ngModel>
+  </div>
+    <div class="mb-3">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" id="nom" name="nom" class="form-control" required ngModel>
+    </div>
+    <div class="mb-3">
+        <label for="prix" class="form-label">Prix</label>
+        <input type="number" id="prix" name="prix" class="form-control" required ngModel>
+    </div>
+    <button type="submit" class="btn btn-primary">Ajouter Produit</button>

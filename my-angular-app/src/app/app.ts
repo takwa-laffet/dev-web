@@ -5,9 +5,11 @@ import { SIGNAL } from '@angular/core/primitives/signals';
 import { NgClass ,NgStyle } from '@angular/common';
 import { Lifecycle } from './lifecycle/lifecycle';
 import { CommonModule } from '@angular/common';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterLink, FormsModule, NgClass, NgStyle,Lifecycle, CommonModule ],
+  imports: [RouterOutlet,RouterLink, FormsModule, NgClass, NgStyle,Lifecycle, CommonModule, NgbModule ],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

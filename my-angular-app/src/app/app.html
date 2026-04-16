@@ -46,16 +46,17 @@
     <a routerLink="/contact">Contact</a>
     <a routerLink="/reactive-form">Reactive Form</a>
     <a routerLink="/s20">S20</a>
+    <a routerLink="/produit">produit</a>
  </nav> 
-<h1>parent component</h1>
+<!-- <h1>parent component</h1>
 <button (click)="increment()">increment</button>
 <button (click)="toggle()">toggle</button>
-
+ -->
 @if (isvisible()) { <!-- Ajout des parenthèses ici -->
-   <app-lifecycle [data]="mynumber"></app-lifecycle>
-}
+<!--    <app-lifecycle [data]="mynumber"></app-lifecycle>
+ -->}
 @else {
-   <p>lifecycle component is hidden</p>
-}
+<!--    <p>lifecycle component is hidden</p>
+ -->}
 
 <router-outlet />

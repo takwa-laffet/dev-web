@@ -1,0 +1,25 @@
+{
+  "produits": [
+    {
+      "name": "asus",
+      "price": 1800,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nom": "ZLMDD",
+      "prix": 12
+    },
+    {
+      "id": "3",
+      "nom": "hp",
+      "prix": 1300
+    },
+    {
+      "id": "4",
+      "nom": "asus",
+      "prix": 13000
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
