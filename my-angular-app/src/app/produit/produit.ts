@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { ProduitService } from '../services/produit.service';
 import { FormsModule,NgForm } from '@angular/forms';
+import { AuthService } from '../services/auth.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-produit',
   imports: [FormsModule],
@@ -8,6 +10,8 @@ import { FormsModule,NgForm } from '@angular/forms';
   styleUrl: './produit.css',
 })
 export class Produit {
+  private authService=inject(AuthService);
+  private router = inject(Router);
   private produitService=inject(ProduitService);
   produits:any[]=[];
   ngOnInit(){
@@ -28,5 +32,9 @@ supprimer(id:string){
     
    this.produits=this.produits.filter(p=>p.id!==id);
   })}
+logout(){
+  this.authService.logout();
 
+this.router.navigate(['/login']);
+}
 }

@@ -1,0 +1,29 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "takwa",
+      "email": "takwa@example.com",
+      "password": "password123"
+    },
+    {
+      "name": "admin",
+      "email": "takwa5laffet@gmail.com",
+      "password": "123",
+      "id": "_mPvQac7kq4"
+    },
+    {
+      "name": null,
+      "email": null,
+      "password": null,
+      "id": "kGsWnpCXgEU"
+    },
+    {
+      "name": "takwa-laffet",
+      "email": "takwa@takwa.com",
+      "password": "654321",
+      "id": "QqjPBY8Jryc"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

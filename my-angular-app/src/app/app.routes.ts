@@ -13,6 +13,9 @@ import { S22 } from './s22/s22';
 import { S22Parent } from './s22-parent/s22-parent';
 import { Produit } from './produit/produit';
 import { Modifierprod } from './modifierprod/modifierprod';
+import { Signup } from './signup/signup';
+import { Login } from './login/login';
+import { authGuard } from './services/auth.guard';
 export const routes: Routes = [
     {path:'',component: App},
     {path:'exmple1',component: MonComposant},
@@ -26,6 +29,8 @@ export const routes: Routes = [
     {path:'lifecycle',component: Lifecycle},
     {path:'s22',component: S22},
     {path:'s22-parent', component: S22Parent},
-    {path:'produit',component: Produit},
-    {path:'modifierprod/:id',component: Modifierprod}
+    {path:'produit',component: Produit,canActivate:[authGuard]},
+    {path:'modifierprod/:id',component: Modifierprod},
+    {path:'signup',component:Signup},
+    {path:'login',component:Login}
 ];
