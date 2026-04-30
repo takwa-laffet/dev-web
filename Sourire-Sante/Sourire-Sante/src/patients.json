@@ -1,0 +1,40 @@
+{
+  "patients": [
+    {
+      "id": "1",
+      "name": "yassine elKateb",
+      "case": "diabete",
+      "age": 23,
+      "dernierrendezvous": "2024-05-20",
+      "rendezvous": [
+        {
+          "date": "2024-05-20",
+          "motif": "suivi de diabete",
+          "medecin": "Dr. Smith"
+        }
+      ]
+    },
+    {
+      "name": "takwa",
+      "case": "case1",
+      "age": "32",
+      "dernierrendezvous": "2026/3/22",
+      "id": "3NVUdiqcpZU"
+    },
+    {
+      "name": "takwa",
+      "case": "",
+      "age": 0,
+      "dernierrendezvous": "",
+      "id": "DnlTTMkmh9U"
+    },
+    {
+      "name": "mohmed",
+      "case": "case2",
+      "age": "32",
+      "dernierrendezvous": "2022/2/3",
+      "id": "RwQ9oiBPPsI"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,24 @@
+<p>Patients</p>
+@for(p of patients; track p.id ){
+    <div >
+        <span>name :</span><span>{{p.name}}</span>
+        <br>
+        <span>age :</span><span>{{p.age}}</span>
+        <br>
+        <span>case :</span><span>{{p.case}}</span>
+        <br>
+
+        <span>dernier rendezvous :</span><span>{{p.dernierrendezvous}}</span>
+        <br>
+@for(r of p.rendezvous; track r.id){
+    <span>rendezvous date :</span><span>{{r.date}}</span>
+        <br>
+
+        <span>rendezvous medecin :</span><span>{{r.medecin}}</span>
+        <br>
+
+        <span>rendezvous motif :</span><span>{{r.motif}}</span>
+}
+    </div>
+}
+<button (click)="logout()">Logout</button>

@@ -25,3 +25,4 @@ export class Lifecycle implements OnInit, OnChanges, OnDestroy {
     console.log("4. ngOnDestroy : Le composant va être supprimé");
   }
 }
+//<Lifecycle [data]="0"></Lifecycle> dans le parent pour tester les changements de données et la destruction du composant.

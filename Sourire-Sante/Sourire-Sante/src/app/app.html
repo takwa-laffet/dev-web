@@ -1,1 +1,6 @@
+<input [(ngModel)]="patient.name" placeholder="name">
+<input [(ngModel)]="patient.case" placeholder="case">
+<input [(ngModel)]="patient.age" placeholder="age">
+<input [(ngModel)]="patient.dernierrendezvous" placeholder="Dernier rendez-vous">
+<app-addpatients [patientDate]="patient" (onconfirm)="save()"></app-addpatients>
 <router-outlet></router-outlet>

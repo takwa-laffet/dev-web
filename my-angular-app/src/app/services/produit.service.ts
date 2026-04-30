@@ -14,7 +14,7 @@ export class ProduitService {
   }
   //lire les produits read
   LireProd(): Observable<any> {
-    return this.http.get(this.url);
+    return this.http.get(this.url).subscribe;
   }
   //modifier un produit update
   modifProd(id: string, produit: any): Observable<any> {
