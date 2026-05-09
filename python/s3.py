@@ -64,3 +64,53 @@ print(N)
 print(A)
 print("N-A:", N-A)
 print("A-N:", A-N)
+print("##########################################")
+def f1():
+    print("bonjour")
+    a=1
+    b=2
+    c=a+b
+    print(c)
+print("apres la définition de la fonction f1()")
+f1()
+def f2(x,y):
+    c=x+y
+    print(c)
+print("#############################")
+f2(4,3)
+v="hi"
+w=" there"
+f2(v,w)
+print("#############################")
+def f3(nom="user",a=10):
+    print("bonjour",nom)
+    print("vous avez",a,"ans")
+f3()
+f3("maiem",26)
+print("#############################")
+
+def f4(a,b,c,d):
+    return a+b,c-d,a*2,b/c
+print(f4(1,2,3,4))
+r,t,u,v=f4(5,6,7,8)
+print(r)
+print(t)
+print(u)
+print(v)
+print("#############################")
+f2(r,u)
+print("#############################")
+#x=int("abc")
+try:
+    print("hello world")
+    x=int("abc")
+except ValueError:
+    print("erreur")
+print(2+7)
+try:
+    file=open("test.txt")
+    print("fichier ouvert avec succès")
+except:
+    print("erreur d'ouverture du fichier")
+finally:
+    print("fin du programme")
