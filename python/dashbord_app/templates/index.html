@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <h1>Welcome to the Dashboard</h1>
+    <a href="/">dashboard</a>
+    <a href="/add">add data</a>
+
+    <div>
+        <h1> Total study hours: {{total_study_hours}}</h1>
+        <h1> Total sleep sessions: {{total_sleep_hours}}</h1>
+        <h1> Total work hours: {{total_work_hours}}</h1>
+        <h1> Total sport hours: {{total_sport_hours}}</h1>
+    </div>
+    <table border="1">
+        <tr>
+            <th>Date</th>
+            <th>Study Hours</th>
+            <th>Sleep Hours</th>
+            <th>Work Hours</th>
+            <th>Sport Hours</th>
+        </tr>
+        {% for entry in data %}
+        <tr>
+            <td>{{ entry.date }}</td>
+            <td>{{ entry.study_hours }}</td>
+            <td>{{ entry.sleep_hours }}</td>
+            <td>{{ entry.work_hours }}</td>
+            <td>{{ entry.sport_hours }}</td>
+            <td><a href="/edit/{{ entry.id }}">Edit</a></td>
+            <td><a href="/delete/{{ entry.id }}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <canvas id="studyChart" width="400" height="200"></canvas>
+    <script>
+       const labels=[
+       {% for entry in data %}
+       "{{entry.date}}",
+       {% endfor %}
+       ];
+       const values= [
+       {% for entry in data %}
+       {{entry.study_hours}},
+       {% endfor %}
+       ];
+       new Chart(document.getElementById("studyChart"),{
+        type:'line',
+        data:{
+            labels:labels,
+            datasets:[{
+                label:'Study Hours',
+                data:values,
+                borderColor:'rgba(75, 192, 192, 1)',
+                backgroundColor:'rgba(75, 192, 192, 0.2)',
+                
+            }]
+        }
+       });
+
+    </script>
+</body>
+</html>
